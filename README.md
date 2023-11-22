@@ -7,7 +7,7 @@ Open the "MTG Card Wishlist.txt" file and write down what cards you want to sear
 Have a terminal open and run the code. You have a 2-second window to tab over to the terminal before the script writes out the searches and executes.
 
 ## Advanced
-By default, the program will search https://www.shufflencutgames.co.nz. You can alter the "website" variable within "MTG Card Search NZ.py" to select from a variety of pre-added websites, such as https://gamingdna.conz, https://cardmerchant.co.nz and https://goblingames.nz. Feel free to add your own websites.
+By default, the program will search https://www.shufflencutgames.co.nz. You can alter the "website" variable within "MTG Card Search NZ.py" to select from a variety of pre-added websites, such as https://gamingdna.co.nz, https://cardmerchant.co.nz and https://goblingames.nz. Feel free to add your own websites.
 
 Also by default is the use of firefox, executing it in the terminal. Feel free to change this too.
 
