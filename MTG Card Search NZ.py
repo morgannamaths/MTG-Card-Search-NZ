@@ -2,7 +2,7 @@ import time
 import pyautogui as pg
 
 time.sleep(2)
-search = open("MTG Cards To Search.txt", "r").readlines()
+search = open("MTG Card Wishlist.txt", "r").readlines()
 
 sites = ["shuffleandcutgames", "gamingdna", "cardmerchant", "goblingames"]
 website = sites[0]
