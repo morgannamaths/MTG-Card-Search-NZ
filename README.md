@@ -12,4 +12,5 @@ By default, the program will search https://www.shufflencutgames.co.nz. You can 
 Also by default is the use of firefox, executing it in the terminal using the os command. Feel free to change this too.
 
 ## Updates
-18th December 2023 - Now uses the os command to execute the code, rather than having to manually open a terminal and alt-tabbing.
+### v1.1.0 - 18th December 2023 
+Now uses the os command to execute the code, rather than having to manually open a terminal and alt-tabbing.
