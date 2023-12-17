@@ -1,41 +1,20 @@
-import time
-import pyautogui as pg
+import os
 
-time.sleep(2)
-search = open("MTG Card Wishlist.txt", "r").readlines()
+def CardSearch(website):
+    search = open("MTG Card Wishlist.txt", "r").readlines()
+    command = ["firefox"]
 
-sites = ["shuffleandcutgames", "gamingdna", "cardmerchant", "goblingames"]
-website = sites[0]
+    for index, line in enumerate(search):
+        search[index] = line.replace(" ", "+")
 
-i = 0
-for line in search:
-    search[i] = line.replace(" ", "+")
-    i += 1
+    for index, site in enumerate(["shuffleandcutgames", "gamingdna", "cardmerchant", "goblingames"]):
+        if site == website:
+            for i in range(len(search)):
+                    site_search = [f"https://www.shuffleandcutgames.co.nz/search?q=*{search[i].strip()}*", f"https://gamingdna.co.nz/search?q=*{search[i].strip()}*", f"https://cardmerchant.co.nz/search?q=*{search[i].strip()}*", f"https://goblingames.nz/search?q={search[i].strip()}"]
+                    command.append(site_search[index])
 
-# shuffleandcutgames
-for i in range(len(search)):
-    if website == "shuffleandcutgames":
-        if i == 0:
-            pg.write("firefox ")
-        # .strip() removes \n at end of line
-        pg.write(f"https://www.shuffleandcutgames.co.nz/search?q=*{search[i].strip()}* ")
+    os.system(" ".join(command))
 
-    if website == "gamingdna":
-        if i == 0:
-            pg.write("firefox ")
-        # .strip() removes \n at end of line
-        pg.write(f"https://gamingdna.co.nz/search?q=*{search[i].strip()}* ")
-
-    if website == "cardmerchant":
-        if i == 0:
-            pg.write("firefox ")
-        # .strip() removes \n at end of line
-        pg.write(f"https://cardmerchant.co.nz/search?q=*{search[i].strip()}* ")
-
-    if website == "goblingames":
-        if i == 0:
-            pg.write("firefox ")
-        # .strip() removes \n at end of line
-        pg.write(f"https://goblingames.nz/search?q={search[i].strip()} ")
-
-pg.press("enter")
+if __name__ == "__main__":
+    sites = ["shuffleandcutgames", "gamingdna", "cardmerchant", "goblingames"]
+    CardSearch(sites[0])
